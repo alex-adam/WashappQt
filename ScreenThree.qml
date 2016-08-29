@@ -188,6 +188,5 @@ Rectangle {
             _screen4.resultTemperatureHot.active = true;
             return;
         }
-
     }
 }

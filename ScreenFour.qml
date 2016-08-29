@@ -129,7 +129,6 @@ Rectangle {
         text: "WITH"
     }
 
-
     Style {
         id: _style
     }

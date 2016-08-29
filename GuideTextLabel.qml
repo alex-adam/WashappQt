@@ -1,6 +1,7 @@
 import QtQuick 2.0
 
 Text {
+    color: _style.highlightColor
 
     font.pixelSize: _style.fontSizeSmall
 
@@ -9,8 +10,6 @@ Text {
     font.family: "Helvetica Neue"
 
     font.letterSpacing: 5
-
-    color: _style.highlightColor
 
     Style {
         id: _style

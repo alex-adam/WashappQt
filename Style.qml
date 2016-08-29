@@ -13,7 +13,6 @@ Item {
     property int screenHeight: 667 //1334
     property int screenWidth: 375 //750
 
-
     function dp(pixel) {
         return pixel;
     }

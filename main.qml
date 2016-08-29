@@ -11,20 +11,12 @@ Window {
         id: _mainScreen
 
         height: root.height
-        width: 375//root.width * 3
+        width: parent.width
 
         state: "0"
 
         ScreenOne {
             id: _screen1
-
-            MouseArea {
-                anchors.fill: parent
-
-                onClicked: {
-                    _mainScreen.state = "1"
-                }
-            }
         }
 
         ScreenTwo {
@@ -44,10 +36,6 @@ Window {
 
             anchors.left: _screen3.right
         }
-
-
-
-
 
         states: [
             State {
@@ -72,7 +60,6 @@ Window {
             NumberAnimation { property: "x"; easing.type: Easing.InOutQuad; duration: 750 }
         }
     }
-
 
     Style {
         id: _style

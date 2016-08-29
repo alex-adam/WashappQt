@@ -67,6 +67,14 @@ Rectangle {
         text: "[ L A U N D R Y ]"
     }
 
+    MouseArea {
+        anchors.fill: parent
+
+        onClicked: {
+            _mainScreen.state = "1"
+        }
+    }
+
     Style {
         id: _style
     }
