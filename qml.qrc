@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Style.qml</file>
+        <file>ScreenOne.qml</file>
+        <file>GuideTextLabel.qml</file>
+        <file>LinkTextLabel.qml</file>
+        <file>BigLetter.qml</file>
+        <file>ScreenTwo.qml</file>
+        <file>ScreenThree.qml</file>
+        <file>ScreenFour.qml</file>
+        <file>GuideDescriptionLabel.qml</file>
+        <file>GuideSelectedLabel.qml</file>
+        <file>ResultLabel.qml</file>
+    </qresource>
+</RCC>
