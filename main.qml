@@ -12,6 +12,7 @@ Window {
 
         height: root.height
         width: parent.width
+        color: "black"
 
         state: "0"
 
