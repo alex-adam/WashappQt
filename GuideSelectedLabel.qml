@@ -1,7 +1,8 @@
 import QtQuick 2.0
+import "."
 
 GuideTextLabel {
-    color: _style.selectedColor
+    color: Style.selectedColor
 
     font.weight: Font.Bold
 

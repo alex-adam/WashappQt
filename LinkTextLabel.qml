@@ -1,17 +1,14 @@
 import QtQuick 2.0
+import "."
 
 Text {
-    color: _style.activeColor
+    color: Style.activeColor
 
-    font.pixelSize: _style.fontSizeMid
+    font.pixelSize: Style.fontSizeMid
     font.family: "Didot"
     font.underline: true
 
     horizontalAlignment: Text.AlignRight
 
     renderType: Text.NativeRendering
-
-    Style {
-        id: _style
-    }
 }

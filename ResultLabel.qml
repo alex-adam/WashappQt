@@ -1,11 +1,12 @@
 import QtQuick 2.0
+import "."
 
 Text {
     property bool active: false
 
-    color: active ? _style.activeColor : _style.highlightColor
+    color: active ? Style.activeColor : Style.highlightColor
 
-    font.pixelSize: _style.fontSizeMid
+    font.pixelSize: Style.fontSizeMid
 
     horizontalAlignment: Text.AlignRight
 
@@ -13,9 +14,4 @@ Text {
     font.strikeout: !active
 
     renderType: Text.NativeRendering
-
-    Style {
-        id: _style
-    }
-
 }

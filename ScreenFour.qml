@@ -1,10 +1,11 @@
 import QtQuick 2.0
+import "."
 
 Rectangle {
     id: _screen4
 
-    height: _style.screenHeight
-    width: _style.screenWidth
+    height: Style.deviceScreenHeight
+    width: Style.deviceScreenWidth
 
     color: "black"
     clip: true
@@ -21,7 +22,7 @@ Rectangle {
 
         anchors.top: parent.top
         anchors.left: parent.left
-        anchors.leftMargin: -_style.dp(148)
+        anchors.leftMargin: Style.dp(-148)
     }
 
     BigLetter {
@@ -29,15 +30,15 @@ Rectangle {
 
         anchors.top: parent.top
         anchors.left: parent.left
-        anchors.leftMargin: _style.dp(238)
+        anchors.leftMargin: Style.dp(238)
     }
 
     ResultLabel {
         id: _screen4ResultText1
         anchors.bottom: _screen4ResultText2.top
-        anchors.bottomMargin: _style.dp(18)
+        anchors.bottomMargin: Style.dp(18)
         anchors.right: parent.right
-        anchors.rightMargin: _style.dp(30)
+        anchors.rightMargin: Style.dp(30)
 
         text: "COLD"
     }
@@ -45,9 +46,9 @@ Rectangle {
     ResultLabel {
         id: _screen4ResultText2
         anchors.bottom: _screen4ResultText3.top
-        anchors.bottomMargin: _style.dp(18)
+        anchors.bottomMargin: Style.dp(18)
         anchors.right: parent.right
-        anchors.rightMargin: _style.dp(30)
+        anchors.rightMargin: Style.dp(30)
 
         text: "WARM"
     }
@@ -55,9 +56,9 @@ Rectangle {
     ResultLabel {
         id: _screen4ResultText3
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: _style.dp(242)
+        anchors.bottomMargin: Style.dp(242)
         anchors.right: parent.right
-        anchors.rightMargin: _style.dp(30)
+        anchors.rightMargin: Style.dp(30)
 
         text: "HOT"
     }
@@ -65,9 +66,9 @@ Rectangle {
     ResultLabel {
         id: _screen4ResultText4
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: _style.dp(45)
+        anchors.bottomMargin: Style.dp(45)
         anchors.right: parent.right
-        anchors.rightMargin: _style.dp(30)
+        anchors.rightMargin: Style.dp(30)
         active: true
 
         text: resultWashingType
@@ -77,9 +78,9 @@ Rectangle {
         id: _screen4GuideTextLineOne
 
         anchors.top: parent.top
-        anchors.topMargin: _style.dp(74)
+        anchors.topMargin: Style.dp(74)
         anchors.left: parent.left
-        anchors.leftMargin: _style.dp(27)
+        anchors.leftMargin: Style.dp(27)
 
         text: "WASH"
     }
@@ -88,9 +89,9 @@ Rectangle {
         id: _screen4GuideTextLineOneDetail
 
         anchors.top: parent.top
-        anchors.topMargin: _style.dp(74)
+        anchors.topMargin: Style.dp(74)
         anchors.left: _screen4GuideTextLineOne.right
-        anchors.leftMargin: _style.dp(7)
+        anchors.leftMargin: Style.dp(7)
 
         text: _screen3.chosenColor
 
@@ -105,9 +106,9 @@ Rectangle {
     GuideSelectedLabel {
         id: _screen4GuideTextLineTwo
         anchors.top: _screen4GuideTextLineOne.bottom
-        anchors.topMargin: _style.dp(10)
+        anchors.topMargin: Style.dp(10)
         anchors.left: parent.left
-        anchors.leftMargin: _style.dp(27)
+        anchors.leftMargin: Style.dp(27)
 
         text: _screen4.chosenType
 
@@ -122,14 +123,10 @@ Rectangle {
     GuideTextLabel {
         id: _screen4GuideTextLineTwoDetail
         anchors.top: _screen4GuideTextLineOne.bottom
-        anchors.topMargin: _style.dp(10)
+        anchors.topMargin: Style.dp(10)
         anchors.left: _screen4GuideTextLineTwo.right
-        anchors.leftMargin: _style.dp(7)
+        anchors.leftMargin: Style.dp(7)
 
         text: "WITH"
-    }
-
-    Style {
-        id: _style
     }
 }

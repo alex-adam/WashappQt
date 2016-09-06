@@ -1,10 +1,11 @@
 import QtQuick 2.0
+import "."
 
 Rectangle {
     id: _screen3
 
-    height: _style.screenHeight
-    width: _style.screenWidth
+    height: Style.deviceScreenHeight
+    width: Style.deviceScreenWidth
 
     color: "black"
     clip: true
@@ -16,7 +17,7 @@ Rectangle {
 
         anchors.top: parent.top
         anchors.left: parent.left
-        anchors.leftMargin: -_style.dp(168)
+        anchors.leftMargin: Style.dp(-168)
     }
 
     BigLetter {
@@ -24,15 +25,15 @@ Rectangle {
 
         anchors.top: parent.top
         anchors.left: parent.left
-        anchors.leftMargin: _style.dp(228)
+        anchors.leftMargin: Style.dp(228)
     }
 
     LinkTextLabel {
         id: _screen3LinkText4
         anchors.bottom: _screen3LinkText1.top
-        anchors.bottomMargin: _style.dp(18)
+        anchors.bottomMargin: Style.dp(18)
         anchors.right: parent.right
-        anchors.rightMargin: _style.dp(30)
+        anchors.rightMargin: Style.dp(30)
 
         text: "CLOTHES"
 
@@ -49,9 +50,9 @@ Rectangle {
     LinkTextLabel {
         id: _screen3LinkText1
         anchors.bottom: _screen3LinkText2.top
-        anchors.bottomMargin: _style.dp(18)
+        anchors.bottomMargin: Style.dp(18)
         anchors.right: parent.right
-        anchors.rightMargin: _style.dp(30)
+        anchors.rightMargin: Style.dp(30)
 
         text: "DELICATES"
 
@@ -68,9 +69,9 @@ Rectangle {
     LinkTextLabel {
         id: _screen3LinkText2
         anchors.bottom: _screen3LinkText3.top
-        anchors.bottomMargin: _style.dp(18)
+        anchors.bottomMargin: Style.dp(18)
         anchors.right: parent.right
-        anchors.rightMargin: _style.dp(30)
+        anchors.rightMargin: Style.dp(30)
 
         text: "TOWELS"
 
@@ -87,9 +88,9 @@ Rectangle {
     LinkTextLabel {
         id: _screen3LinkText3
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: _style.dp(46)
+        anchors.bottomMargin: Style.dp(46)
         anchors.right: parent.right
-        anchors.rightMargin: _style.dp(30)
+        anchors.rightMargin: Style.dp(30)
 
         text: "LINEN"
 
@@ -107,9 +108,9 @@ Rectangle {
         id: _screen3GuideTextLineOne
 
         anchors.top: parent.top
-        anchors.topMargin: _style.dp(74)
+        anchors.topMargin: Style.dp(74)
         anchors.left: parent.left
-        anchors.leftMargin: _style.dp(27)
+        anchors.leftMargin: Style.dp(27)
 
         text: "SORT"
     }
@@ -119,9 +120,9 @@ Rectangle {
         id: _screen3GuideTextLineOneDetail
 
         anchors.top: parent.top
-        anchors.topMargin: _style.dp(74)
+        anchors.topMargin: Style.dp(74)
         anchors.left: _screen3GuideTextLineOne.right
-        anchors.leftMargin: _style.dp(7)
+        anchors.leftMargin: Style.dp(7)
 
         text: _screen3.chosenColor
 
@@ -136,9 +137,9 @@ Rectangle {
     GuideTextLabel {
         id: _screen3GuideTextLineTwo
         anchors.top: _screen3GuideTextLineOne.bottom
-        anchors.topMargin: _style.dp(10)
+        anchors.topMargin: Style.dp(10)
         anchors.left: parent.left
-        anchors.leftMargin: _style.dp(27)
+        anchors.leftMargin: Style.dp(27)
 
         text: "BY"
     }
@@ -146,16 +147,11 @@ Rectangle {
     GuideDescriptionLabel {
         id: _screen3GuideTextLineTwoDetail
         anchors.top: _screen3GuideTextLineOne.bottom
-        anchors.topMargin: _style.dp(10)
+        anchors.topMargin: Style.dp(10)
         anchors.left: _screen3GuideTextLineTwo.right
-        anchors.leftMargin: _style.dp(7)
+        anchors.leftMargin: Style.dp(7)
 
         text: "[ T Y P E ]"
-    }
-
-
-    Style {
-        id: _style
     }
 
     function calculateResult() {

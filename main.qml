@@ -1,17 +1,19 @@
 import QtQuick 2.5
 import QtQuick.Window 2.2
+import "."
 
 Window {
     id: root
     visible: true
-    height: _style.screenHeight
-    width: _style.screenWidth
+
+    height: Screen.height
+    width: Screen.width
 
     Rectangle {
         id: _mainScreen
 
         height: root.height
-        width: parent.width
+        width: root.width
         color: "black"
 
         state: "0"
@@ -62,7 +64,8 @@ Window {
         }
     }
 
-    Style {
-        id: _style
+    onSceneGraphInitialized: {
+        Style.deviceScreenHeight = Screen.height;
+        Style.deviceScreenWidth = Screen.width;
     }
 }

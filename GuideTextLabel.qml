@@ -1,17 +1,14 @@
 import QtQuick 2.0
+import "."
 
 Text {
-    color: _style.highlightColor
+    color: Style.highlightColor
 
-    font.pixelSize: _style.fontSizeSmall
+    font.pixelSize: Style.fontSizeSmall
 
     font.italic: true
     font.weight: Font.Normal
     font.family: "Helvetica Neue"
 
     font.letterSpacing: 5
-
-    Style {
-        id: _style
-    }
 }

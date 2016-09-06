@@ -1,7 +1,7 @@
 import QtQuick 2.0
+import "."
 
 GuideTextLabel {
-    color: _style.activeColor
-
+    color: Style.activeColor
     font.letterSpacing: 0
 }

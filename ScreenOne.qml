@@ -1,10 +1,11 @@
 import QtQuick 2.0
+import "."
 
 Rectangle {
     id: _screen1
 
-    height: _style.screenHeight
-    width: _style.screenWidth
+    height: Style.deviceScreenHeight
+    width: Style.deviceScreenWidth
 
     color: "black"
 
@@ -13,15 +14,15 @@ Rectangle {
 
         anchors.top: parent.top
         anchors.left: parent.left
-        anchors.leftMargin: _style.dp(198)
+        anchors.leftMargin: Style.dp(198)
     }
 
     LinkTextLabel {
         id: _screen1LinkText
         anchors.bottom: _screen1LinkText2.top
-        anchors.bottomMargin: _style.dp(15)
+        anchors.bottomMargin: Style.dp(15)
         anchors.right: parent.right
-        anchors.rightMargin: _style.dp(30)
+        anchors.rightMargin: Style.dp(30)
 
         text: "GET"
     }
@@ -29,9 +30,9 @@ Rectangle {
     LinkTextLabel {
         id: _screen1LinkText2
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: _style.dp(40)
+        anchors.bottomMargin: Style.dp(40)
         anchors.right: parent.right
-        anchors.rightMargin: _style.dp(30)
+        anchors.rightMargin: Style.dp(30)
 
         text: "STARTED"
     }
@@ -40,9 +41,9 @@ Rectangle {
         id: _screen1GuideTextLineOne
 
         anchors.top: parent.top
-        anchors.topMargin: _style.dp(74)
+        anchors.topMargin: Style.dp(74)
         anchors.left: parent.left
-        anchors.leftMargin: _style.dp(27)
+        anchors.leftMargin: Style.dp(27)
 
         text: "SHOW ME YOUR"
     }
@@ -50,9 +51,9 @@ Rectangle {
     GuideTextLabel {
         id: _screen1GuideTextLineTwo
         anchors.top: _screen1GuideTextLineOne.bottom
-        anchors.topMargin: _style.dp(10)
+        anchors.topMargin: Style.dp(10)
         anchors.left: parent.left
-        anchors.leftMargin: _style.dp(27)
+        anchors.leftMargin: Style.dp(27)
 
         text: "DIRTY"
     }
@@ -60,9 +61,9 @@ Rectangle {
     GuideDescriptionLabel {
         id: _screen1GuideTextLineTwoDetail
         anchors.top: _screen1GuideTextLineOne.bottom
-        anchors.topMargin: _style.dp(10)
+        anchors.topMargin: Style.dp(10)
         anchors.left: _screen1GuideTextLineTwo.right
-        anchors.leftMargin: _style.dp(8)
+        anchors.leftMargin: Style.dp(8)
 
         text: "[ L A U N D R Y ]"
     }
@@ -73,9 +74,5 @@ Rectangle {
         onClicked: {
             _mainScreen.state = "1"
         }
-    }
-
-    Style {
-        id: _style
     }
 }

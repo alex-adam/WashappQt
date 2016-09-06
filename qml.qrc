@@ -12,5 +12,6 @@
         <file>GuideDescriptionLabel.qml</file>
         <file>GuideSelectedLabel.qml</file>
         <file>ResultLabel.qml</file>
+        <file>qmldir</file>
     </qresource>
 </RCC>
